@@ -24,8 +24,12 @@ makeCacheMatrix <- function(x = matrix()) {
 ## parameter a cached matrix object and returns inverse of the matrix. Inverse
 ## is calculated if it has not been calculated in the past and stored in the 
 ## object passed. If inverse has already been calculated once, the inverse value 
-## is directly. The function assumes that the matrix is always invertible as 
-## mentioned in the problem statement
+## is directly returned. The function assumes that the matrix is always invertible  
+## as mentioned in the problem statement
+
+## A Inv(A) = I, where I is the identity matrix. So in the function below, Identity
+## matrix is calculated using diag(n), where n is the number of rows(or columns) in
+## matrix to be inverted.
 
 cacheSolve <- function(x, ...) {
     ## Return a matrix that is the inverse of 'x'
